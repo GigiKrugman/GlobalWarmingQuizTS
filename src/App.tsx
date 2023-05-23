@@ -10,17 +10,28 @@ function App() {
   const [quizStarted, setQuizStarted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
 
   const startQuiz = () => {
     setQuizStarted(true);
   };
 
+  const resetQuiz = () => {
+    setQuizStarted(false);
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setSelectedAnswer(null);
+  };
+
   const onAnswer = (answerIndex: number) => {
+    setSelectedAnswer(answerIndex);
     if (answerIndex === QuestionData[currentQuestionIndex].correctAnswerIndex) {
       setScore(score + QuestionData[currentQuestionIndex].score);
     }
-
-    setCurrentQuestionIndex(currentQuestionIndex + 1);
+    setTimeout(() => {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setSelectedAnswer(null);
+    }, 1000);
   };
 
   if (quizStarted) {
@@ -30,11 +41,12 @@ function App() {
           <QuestionBox
             question={QuestionData[currentQuestionIndex]}
             onAnswer={onAnswer}
+            selectedAnswer={selectedAnswer}
           />
         </div>
       );
     } else {
-      return <EndScreen finalScore={score} />;
+      return <EndScreen finalScore={score} resetQuiz={resetQuiz} />;
     }
   } else {
     return (
