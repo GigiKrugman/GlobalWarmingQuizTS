@@ -1,0 +1,36 @@
+.initial--screen--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* This will center the box vertically */
+  padding: 20px 20px;
+  text-align: center;
+  border: 8px solid #333; /* A simple border can help establish the raw look of Neubrutalism */
+  background-color: #ffffff;
+}
+
+.initial--screen--title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.initial--screen--sub-title {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.initial--screen--btn {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.initial--screen--btn:hover {
+  background-color: #666;
+}

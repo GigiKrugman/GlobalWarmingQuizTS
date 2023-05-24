@@ -17,9 +17,11 @@ export default function QuestionBox({
   selectedAnswer,
 }: QuestionBoxProps) {
   return (
-    <div>
-      <h1>{question.questionText}</h1>
-      <div>
+    <div className="question--box--container">
+      <h3 className="question--box--title">
+        Question {question.questionText} of 10
+      </h3>
+      <div className="questions--btn--container">
         {question.answers.map((answer, index) => {
           let backgroundColor = "";
 
@@ -33,8 +35,9 @@ export default function QuestionBox({
               key={index}
               onClick={() => onAnswer(index)}
               style={{ backgroundColor: backgroundColor }}
+              className="question--btn"
             >
-              {answer}
+              <h4 className="answer--box"> {answer} </h4>
             </button>
           );
         })}

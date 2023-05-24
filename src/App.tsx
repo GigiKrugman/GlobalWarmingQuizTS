@@ -1,8 +1,9 @@
 //import { useState } from "react";
-import InitialPage from "./components/InitialPage";
-import QuestionBox from "./components/Question";
-import EndScreen from "./components/EndScreen";
+import InitialPage from "./components/InitialPageComponent/InitialPage";
+import QuestionBox from "./components/QuestionComponent/Question";
+import EndScreen from "./components/EndScreenComponent/EndScreen";
 import "./App.css";
+
 import { useState } from "react";
 import { QuestionData } from "./QuestionData";
 
