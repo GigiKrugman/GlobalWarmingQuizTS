@@ -10,6 +10,7 @@
   width: 60%;
   border-radius: 15px;
   font-family: "Courier New", Courier, monospace;
+  box-shadow: 5px 5px 0px #000;
 }
 
 .question--box--text--title {

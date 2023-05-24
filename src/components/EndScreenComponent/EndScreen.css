@@ -10,6 +10,7 @@
   width: 60%;
   border-radius: 15px;
   font-family: "Courier New", Courier, monospace;
+  box-shadow: 5px 5px 0px #000;
 }
 
 .final-screen--container h2 {
@@ -25,11 +26,12 @@
   border-radius: 5px;
   border: none;
   color: #fff;
-  background-color: #000;
+  background-color: #3300ff;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 3px 3px 0px #000;
 }
 
 .final-screen--container button:hover {
-  background-color: #444;
+  background-color: #14064d;
 }
