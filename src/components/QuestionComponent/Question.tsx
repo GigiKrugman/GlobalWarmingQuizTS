@@ -1,4 +1,5 @@
 export type Question = {
+  questionNumber: number;
   questionText: string;
   answers: string[];
   correctAnswerIndex: number;
@@ -18,9 +19,10 @@ export default function QuestionBox({
 }: QuestionBoxProps) {
   return (
     <div className="question--box--container">
-      <h3 className="question--box--title">
-        Question {question.questionText} of 10
+      <h3 className="question--box--number">
+        Question {question.questionNumber} of 10
       </h3>
+      <h2 className="question--box--text--title">{question.questionText}</h2>
       <div className="questions--btn--container">
         {question.answers.map((answer, index) => {
           let backgroundColor = "";

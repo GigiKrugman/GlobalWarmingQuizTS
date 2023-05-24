@@ -5,4 +5,5 @@ body {
   background-color: #f0f0f0;
   font-family: "Courier New", monospace; /* Consider using a monospaced font for the Neubrutalist look */
   color: #333;
+  background-image: url("./assets/Images/backgroun--image--neobrutalism.jpeg");
 }

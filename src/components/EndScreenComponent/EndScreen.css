@@ -1,0 +1,35 @@
+.final-screen--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #000;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fafafa;
+  width: 60%;
+  border-radius: 15px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.final-screen--container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #000;
+}
+
+.final-screen--container button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.final-screen--container button:hover {
+  background-color: #444;
+}

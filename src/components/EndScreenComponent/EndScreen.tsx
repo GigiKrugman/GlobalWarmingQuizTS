@@ -5,9 +5,9 @@ interface Final {
 
 export default function EndScreen({ finalScore, resetQuiz }: Final) {
   return (
-    <div>
-      Your FInal Score is {finalScore}
-      <button onClick={resetQuiz}>Let's Start</button>;
+    <div className="final-screen--container">
+      <h2>Your Final Score is {finalScore} points</h2>
+      <button onClick={resetQuiz}>Start Again</button>
     </div>
   );
 }
