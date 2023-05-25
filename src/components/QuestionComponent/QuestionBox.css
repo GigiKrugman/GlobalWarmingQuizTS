@@ -44,7 +44,8 @@
 }
 
 .question--btn:hover {
-  background-color: #ff4911;
+  background-color: #2a0f74;
+  transform: scale(1.1);
 }
 
 .answer--box {

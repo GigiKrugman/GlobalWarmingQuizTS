@@ -12,6 +12,8 @@ function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [wrongAnswers, setWrongAnswers] = useState(0);
 
   const startQuiz = () => {
     setQuizStarted(true);
@@ -21,6 +23,8 @@ function App() {
     setQuizStarted(false);
     setCurrentQuestionIndex(0);
     setScore(0);
+    setCorrectAnswers(0);
+    setWrongAnswers(0);
     setSelectedAnswer(null);
   };
 
@@ -28,6 +32,9 @@ function App() {
     setSelectedAnswer(answerIndex);
     if (answerIndex === QuestionData[currentQuestionIndex].correctAnswerIndex) {
       setScore(score + QuestionData[currentQuestionIndex].score);
+      setCorrectAnswers(correctAnswers + 1);
+    } else {
+      setWrongAnswers(wrongAnswers + 1);
     }
     setTimeout(() => {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
@@ -47,7 +54,14 @@ function App() {
         </div>
       );
     } else {
-      return <EndScreen finalScore={score} resetQuiz={resetQuiz} />;
+      return (
+        <EndScreen
+          finalScore={score}
+          resetQuiz={resetQuiz}
+          wrongAnswers={wrongAnswers}
+          correctAnswers={correctAnswers}
+        />
+      );
     }
   } else {
     return (
