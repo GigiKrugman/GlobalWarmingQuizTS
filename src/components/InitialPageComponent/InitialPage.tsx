@@ -24,12 +24,25 @@ export default function InitialPage({ startQuiz }: InitialPageProps) {
           <span className="span--easy">Easy</span> - 1 point
         </li>
         <li>
-          <span className="span--medium">Medium</span> - 2 point
+          <span className="span--medium">Medium</span> - 2 points
         </li>
         <li>
-          <span className="span--hard">Difficult</span> - 3 point
+          <span className="span--hard">Difficult</span> - 3 points
         </li>
       </ul>
+      <p className="initial--screen--paragraph">
+        Scores from 0 to 5 points:{" "}
+        <span className="span--hard">Not Enough! 😩</span>
+      </p>
+      <p className="initial--screen--paragraph">
+        Scores from 5 to 10 points:
+        <span className="span--medium">Good Score! 🤓</span>
+      </p>
+      <p className="initial--screen--paragraph">
+        Scores from 0 to 5 points:{" "}
+        <span className="span--easy">Amazing Score! 🤩</span>{" "}
+      </p>
+
       <h4 className="initial--screen--h4">Ready to Take the Challenge?</h4>
       <button onClick={startQuiz} className="initial--screen--btn">
         Let's Start

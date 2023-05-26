@@ -20,7 +20,10 @@ export default function QuestionBox({
   return (
     <div className="question--box--container">
       <h3 className="question--box--number">
-        Question {question.questionNumber} of 10
+        <span className="span--question--color">
+          {" "}
+          Question {question.questionNumber} of 10
+        </span>
       </h3>
       <h2 className="question--box--text--title">{question.questionText}</h2>
       <div className="questions--btn--container">

@@ -7,22 +7,27 @@
   margin: 20px auto;
   padding: 20px;
   background-color: #fafafa;
-  width: 60%;
+  width: 90%; /* Full width on mobile */
   border-radius: 15px;
   font-family: "Courier New", Courier, monospace;
   box-shadow: 5px 5px 0px #000;
 }
 
+.final--score--span {
+  color: green;
+  font-size: 20px; /* Smaller font on mobile */
+}
+
 .final-screen--container h2 {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 20px; /* Smaller font on mobile */
   text-align: center;
   color: #000;
 }
 
 .final-screen--container button {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 16px; /* Smaller font on mobile */
   border-radius: 5px;
   border: none;
   color: #fff;
@@ -34,4 +39,39 @@
 
 .final-screen--container button:hover {
   background-color: #14064d;
+}
+
+.svg-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.svg-text-container svg {
+  margin-right: 10px;
+  width: 20px; /* Smaller SVG on mobile */
+  height: 20px; /* Smaller SVG on mobile */
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .final-screen--container {
+    width: 60%; /* Adjust width for larger screens */
+  }
+
+  .final--score--span {
+    font-size: 30px; /* Larger font on larger screens */
+  }
+
+  .final-screen--container h2 {
+    font-size: 24px; /* Larger font on larger screens */
+  }
+
+  .final-screen--container button {
+    font-size: 20px; /* Larger font on larger screens */
+  }
+
+  .svg-text-container svg {
+    width: 30px; /* Larger SVG on larger screens */
+    height: 30px; /* Larger SVG on larger screens */
+  }
 }

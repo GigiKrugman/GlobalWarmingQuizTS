@@ -3,59 +3,62 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* This will center the box vertically */
+  height: 60%;
+  width: 90%; /* Full width on mobile */
   padding: 20px;
   text-align: center;
-  border: 8px solid #333; /* A simple border can help establish the raw look of Neubrutalism */
+  border: 8px solid #333;
   background-color: #ffffff;
   box-shadow: 5px 5px 0px #000;
-}
-
-.initial--screen--title {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.initial--screen--sub-title {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.initial--screen--h3 {
-  font-size: 25px;
-  color: #ff4911;
-}
-
-.initial--screen--h4 {
-  font-size: 20px;
-}
-
-.initial--screen--paragraph {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.initial--screen--ul {
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.span--easy {
-  color: green;
-}
-
-.span--medium {
-  color: orange;
+  margin: auto;
 }
 
 .span--hard {
   color: red;
 }
 
+.span--medium {
+  color: orange;
+}
+
+.span--easy {
+  color: rgb(2, 162, 58);
+}
+
+.initial--screen--title {
+  font-size: 30px; /* Smaller font on mobile */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.initial--screen--sub-title {
+  font-size: 20px; /* Smaller font on mobile */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.initial--screen--h3 {
+  font-size: 20px; /* Smaller font on mobile */
+  color: #ff4911;
+}
+
+.initial--screen--h4 {
+  font-size: 18px; /* Smaller font on mobile */
+}
+
+.initial--screen--paragraph {
+  font-size: 18px; /* Smaller font on mobile */
+  font-weight: 600;
+}
+
+.initial--screen--ul {
+  font-size: 20px; /* Smaller font on mobile */
+  font-weight: 600;
+}
+
 .initial--screen--btn {
-  font-size: 1.2em;
-  padding: 15px 25px;
+  font-size: 1em; /* Smaller font on mobile */
+  padding: 10px 20px; /* Smaller padding on mobile */
   color: #ffffff;
   background-color: #3300ff;
   border: 5px solid black;
@@ -67,4 +70,40 @@
 
 .initial--screen--btn:hover {
   background-color: black;
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  .initial--screen--container {
+    width: 60vw;
+  }
+
+  .initial--screen--title {
+    font-size: 40px;
+  }
+
+  .initial--screen--sub-title {
+    font-size: 30px;
+  }
+
+  .initial--screen--h3 {
+    font-size: 25px;
+  }
+
+  .initial--screen--h4 {
+    font-size: 20px;
+  }
+
+  .initial--screen--paragraph {
+    font-size: 20px;
+  }
+
+  .initial--screen--ul {
+    font-size: 25px;
+  }
+
+  .initial--screen--btn {
+    font-size: 1.2em;
+    padding: 15px 25px;
+  }
 }
