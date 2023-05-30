@@ -73,4 +73,20 @@ export const QuestionData: Question[] = [
     correctAnswerIndex: 2,
     score: 1,
   },
+  {
+    questionNumber: 9,
+    questionText:
+      "What is the primary greenhouse gas emitted by human activities?",
+    answers: [" Nitrogen", "Oxygen", "Carbon Dioxide", "Argon"],
+    correctAnswerIndex: 2,
+    score: 1,
+  },
+  {
+    questionNumber: 10,
+    questionText:
+      "Which industry is the largest contributor to global warming due to its emission of greenhouse gases?",
+    answers: ["Tourism", "Entertainment", "Education", "Energy Production"],
+    correctAnswerIndex: 3,
+    score: 2,
+  },
 ];
